@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    MainController *nav = [[MainController alloc]init];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
